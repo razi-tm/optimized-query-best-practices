@@ -1,0 +1,16 @@
+.local
+/media
+/static
+/data
+*.swp
+*.log
+*.pot
+*.pyc
+.env
+.coverage
+.mypy_cache/
+.idea
+*.docx
+db.sqlite3
+*.mo
+/venv/

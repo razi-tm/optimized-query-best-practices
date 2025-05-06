@@ -1,0 +1,43 @@
+services:
+  fred:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    restart: on-failure
+    ports:
+      - '8000:8000'
+    environment:
+      - POSTGRES_NAME=fred_db
+      - POSTGRES_USERNAME=fred
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_PASSWORD=password
+    networks:
+      - fred_network
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    command: bash -c "python -m docker.db_is_ready && python manage.py runserver 0.0.0.0:8000"
+  db:
+    image: postgres:16.1
+    environment:
+      - POSTGRES_DB=fred_db
+      - POSTGRES_USER=fred
+      - POSTGRES_PASSWORD=password
+    networks:
+      - fred_network
+    ports:
+      - '5470:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+networks:
+  fred_network:
+
+volumes:
+  postgres_data:
+
+
+

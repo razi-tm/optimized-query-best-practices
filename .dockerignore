@@ -1,0 +1,48 @@
+# Python-related
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.so
+*.egg-info
+dist
+build
+eggs
+*.egg
+*.manifest
+*.spec
+Pipfile
+Pipfile.lock
+
+# Django-related
+**/*.log
+*.pot
+*.db
+*.sqlite3
+media
+static
+*.tgz
+*.tar.gz
+
+# IDE and editor directories
+.vscode/
+.idea/
+*.swp
+
+# Docker-related files
+.dockerignore
+Dockerfile
+
+# Virtual environments
+venv/
+.env/
+*.env
+
+# Other files and directories
+*.bak
+*.tmp
+scripts_and_confs
+docs
+.local
+data
+feeds
