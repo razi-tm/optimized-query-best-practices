@@ -28,7 +28,5 @@ class OrderItem(Base):
         verbose_name = _("order item")
         verbose_name_plural = _("order items")
         indexes = [
-            models.Index(fields=['order']),
-            models.Index(fields=['product']),
             models.Index(fields=['order', 'product']),  # Composite index
         ]
