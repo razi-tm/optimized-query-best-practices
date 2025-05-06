@@ -21,7 +21,7 @@ docker compose exec fred python manage.py generate_data --users 20 --products 40
 Note: Of course, you can run the project as you like (without Docker). Running by Docker is just for simplicity when running the project for the first time.
 
 ## Guide
-Visit http://localhost:8000/silk/ for detailed performance analysis using **Silk**
-You also have a **Debug Toolbar** that appears on the right side of the browser
-And **QueryCount** through bash: sudo docker compose logs -f fred 
+Visit http://localhost:8000/silk/ for detailed performance analysis using **Silk**  
+You also have a **Debug Toolbar** that appears on the right side of the browser  
+And **QueryCount** through bash: sudo docker compose logs -f fred  
 

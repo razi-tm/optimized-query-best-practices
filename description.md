@@ -30,7 +30,7 @@ The `/api/order-item/` endpoint was experiencing slow response times (~5 seconds
   - django-querycount for query metrics
 
 ## Expected Results
-- **Query Reduction**: From N+1 queries per request to just 1 optimized query
+- **Query Reduction**: From 3N+1 queries per request to just 1 optimized query
 - **Response Time**: Target under 200ms (from original ~5000ms)
 - **Scalability**: Better handles large datasets through pagination
 - **Maintainability**: Improved monitoring capabilities for future optimizations
