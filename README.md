@@ -1,7 +1,5 @@
 # Optimized query - best practices
 
-## Task Description
-
 The API endpoint at `/api/order-item/`, managed by the `OrderItemViewSet`, has a satisfying performance after performing optimization and now has a response time under **200ms**.
 
 ## How to Run the Project
